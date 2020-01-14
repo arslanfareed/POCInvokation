@@ -1,4 +1,8 @@
 version: 0.2
+environment_variables:
+  plaintext:
+      "INPUT_FILE": "serverless.yml"
+      "S3_BUCKET": ""
 phases:
   install:
     runtime-versions:
@@ -6,7 +10,6 @@ phases:
     commands:
       - npm install
 #     - npm test
-
   post_build:
     commands:
       - serverless deploy
