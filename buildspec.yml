@@ -6,14 +6,14 @@ environment_variables:
 phases:
   install:
     runtime-versions:
-      nodejs: 10
+      nodejs: 12
     commands:
       - npm install
       - npm install -g serverless
 #     - npm test
     build:
       commands:
-        - serverless deploy --stage cicd | tee deploy.out
+        - serverless deploy --stage cicd --region us-east-2 | tee deploy.out
     post_build:
       commands:
         - . ./test.sh
