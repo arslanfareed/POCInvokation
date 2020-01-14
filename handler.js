@@ -56,6 +56,6 @@ module.exports.responder = async (event, context, callback) => {
   console.log('Lambda B Received event:', JSON.stringify(event, null, 2))
   callback(
     null,
-    response.success({ body: 'Hello Mr.' + event.name +". I hope You are doing good"})
+    response.success({ body: 'Hello Mr.' + event.name +". I hope You are doing good."})
   )
 }
