@@ -6,8 +6,11 @@ phases:
       nodejs: 12
     commands:
       - npm install
-#     - npm install -g serverless
+      - npm install -g serverless
 #     - npm test
+  build:
+    commands:
+      - serverless deploy --stage cicd --region us-east-2 | tee deploy.out
   post_build:
     commands:
-      - serverless deploy --region us-east-2
+      - . ./test.sh
