@@ -25,7 +25,8 @@ provider:
   runtime: nodejs12.x
   stage: dev
   region: us-east-2
-  role: arn:aws:iam::425176370235:role/POC-serverless-codebuild-role
+  role: arn:aws:iam::425176370235:role/service-role/lambdaexecute
+# role: arn:aws:iam::425176370235:role/POC-serverless-codebuild-role
 # you can overwrite defaults here
 #  stage: dev
 #  region: us-east-1
