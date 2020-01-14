@@ -9,4 +9,4 @@ phases:
 
   post_build:
     commands:
-      - serverless deploy --region us-east-2 --verbose
+      - serverless deploy
