@@ -11,6 +11,4 @@ phases:
   build:
     commands:
       - serverless deploy --stage cicd --region us-east-2 | tee deploy.out
-  post_build:
-    commands:
-      - . ./test.sh
+  
