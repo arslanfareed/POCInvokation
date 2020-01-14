@@ -10,7 +10,7 @@ phases:
 #     - npm test
     build:
       commands:
-        - serverless deploy --stage cicd --region us-east-2 | tee deploy.out
+        - serverless deploy --region us-east-2
     post_build:
       commands:
         - . ./test.sh
